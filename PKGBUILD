@@ -2,11 +2,11 @@
 pkgname=crust-git
 pkgver=b01.18.g1728b7b   # Will be auto-generated
 pkgrel=1
-pkgdesc="Crust - Python package installed via pip"
+pkgdesc="Crust - A shell for Linux made in Python"
 arch=('any')
 url="https://github.com/mostypc123/crust"
 license=('MIT')
-depends=('python' 'python-pip')
+depends=('python' 'python-pip' 'python-cohere' 'python-rich')
 makedepends=('git' 'python-build' 'python-installer' 'python-wheel' 'python-setuptools')
 source=("git+$url")
 sha256sums=('SKIP')
