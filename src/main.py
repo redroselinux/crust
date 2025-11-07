@@ -458,8 +458,7 @@ def main():
                             base.console.print("[yellow]Re-querying AI with file contents...[/yellow]")
                             response = co.chat(message=prompt, chat_history=chat_history)
                             base.console.print("[bold cyan]New AI Response:[/bold cyan]\n" + response.text)
-                            # optionally: re-run the parsing loop again here
-                            break  # or continue outer logic
+                            break 
 
                         except Exception as e:
                             base.console.print(f"[red]Could not read file {filepath}: {e}[/red]")
@@ -495,8 +494,7 @@ def main():
                             with open(configs + "/cmds.py", "r") as f:
                                 cmds = f.read()
                             if "car" in cmds:
-                                os.system("curl -s -L -o pkgs https://raw.githubusercontent.com/crust-project/car/refs/heads/main/existing-packages.txt")
-                                with open("pkgs", "r") as f:
+                                with open("/home/"+os.getlogin()+"/.config/car/packagelist", "r") as f:
                                     pkgs = f.read().splitlines()
                                 os.remove("pkgs")
                                 if prompt.split()[0] in pkgs:
