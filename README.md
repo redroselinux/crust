@@ -7,6 +7,8 @@
 
 Crust is an interactive Linux shell written in Python, designed with a modern interface, AI integration, and enhanced tooling for common system tasks.
 
+# Crust had a lot of bugs, so it is archived and we are making a new shell.
+
 ## ✨ Features
 
 - ⚙️ Custom startup hook support via `custom_commands.py`
